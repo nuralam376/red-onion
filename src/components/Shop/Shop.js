@@ -16,13 +16,22 @@ const Shop = () => {
   return (
     <div className="shop">
       <div className="category p-5">
-        <Button className="mr-5" onClick={() => setCategory("breakfast")}>
+        <Button
+          className="mr-5 btn btn-link bg-light"
+          onClick={() => setCategory("breakfast")}
+        >
           Breakfast
         </Button>
-        <Button className="mr-5" onClick={() => setCategory("lunch")}>
+        <Button
+          className="mr-5 btn btn-link bg-light"
+          onClick={() => setCategory("lunch")}
+        >
           Lunch
         </Button>
-        <Button className="mr-5" onClick={() => setCategory("dinner")}>
+        <Button
+          className="mr-5 btn btn-link bg-light"
+          onClick={() => setCategory("dinner")}
+        >
           Dinner
         </Button>
       </div>
