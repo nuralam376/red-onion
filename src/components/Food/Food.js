@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, useRef } from "react";
 import {
+  Alert,
   Button,
   Col,
   Container,
@@ -11,19 +12,38 @@ import { useParams } from "react-router-dom";
 import foodData from "../foodData/foodData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { UserContext } from "../../App";
 
 const Food = () => {
   const { id } = useParams();
   const [food, setFood] = useState({});
   const { name, description, price, image } = food;
+  const [, , cart, setCart] = useContext(UserContext);
+  const [alert, setAlert] = useState(false);
+  const totalRef = useRef();
 
   useEffect(() => {
     const selectedFood = foodData.find((food) => food.id === +id);
     setFood(selectedFood);
   }, [id]);
 
+  const addToCart = (id) => {
+    const newItem = {
+      foodId: id,
+      total: totalRef.current.value,
+    };
+    const newCart = [...cart, newItem];
+    setCart(newCart);
+    setAlert(true);
+  };
+
   return (
     <Container className="mt-5">
+      {alert && (
+        <Alert className="w-50" variant="success">
+          Food added to cart successfully
+        </Alert>
+      )}
       <Row>
         <Col>
           <h1>{name}</h1>
@@ -31,8 +51,9 @@ const Food = () => {
           <h3 className="mt-3 mb-3">
             ${price} &nbsp;
             <FormControl
-              componentClass={"input"}
+              componentclass={"input"}
               type={"number"}
+              ref={totalRef}
               step={"1"}
               min={1}
               defaultValue={1}
@@ -40,7 +61,7 @@ const Food = () => {
             />
           </h3>
           <p className="mt-4 mb-4">
-            <Button className="btn btn-danger">
+            <Button className="btn btn-danger" onClick={() => addToCart(id)}>
               <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon> &nbsp; Add
             </Button>
           </p>
