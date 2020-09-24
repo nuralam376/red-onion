@@ -25,7 +25,8 @@ const foods = [
     category: "breakfast",
     name: "Bagel and cream cheese",
     image: breakfast1,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 6.99,
   },
@@ -34,7 +35,8 @@ const foods = [
     category: "breakfast",
     name: "Breakfast sandwich",
     image: breakfast2,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 9.99,
   },
@@ -44,7 +46,8 @@ const foods = [
     category: "breakfast",
     name: "Baked Chiken",
     image: breakfast3,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 10.99,
   },
@@ -53,7 +56,8 @@ const foods = [
     category: "breakfast",
     name: "Eggs Benedict",
     image: breakfast4,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 8.99,
   },
@@ -62,7 +66,8 @@ const foods = [
     category: "breakfast",
     name: "Toast Croissant Fried egg",
     image: breakfast5,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 19.99,
   },
@@ -71,7 +76,8 @@ const foods = [
     category: "breakfast",
     name: "Full Breakfast Fried Egg Toast Brunch",
     image: breakfast6,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 3.33,
   },
@@ -80,7 +86,8 @@ const foods = [
     category: "lunch",
     name: "Healthy Meal Plan",
     image: lunch1,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 23.99,
   },
@@ -89,7 +96,8 @@ const foods = [
     category: "lunch",
     name: "Fried Chiken Bento",
     image: lunch2,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 9.99,
   },
@@ -98,7 +106,8 @@ const foods = [
     category: "lunch",
     name: "Tarragon Rubbed Salmon",
     image: lunch3,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 6.99,
   },
@@ -107,7 +116,8 @@ const foods = [
     category: "lunch",
     name: "Indian Lunch",
     image: lunch4,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 8.99,
   },
@@ -116,7 +126,8 @@ const foods = [
     category: "lunch",
     name: "Beef Steak",
     image: lunch5,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 15.99,
   },
@@ -125,7 +136,8 @@ const foods = [
     category: "lunch",
     name: "Honey Soy Glazed Salmon with Peppers",
     image: lunch6,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 7.99,
   },
@@ -134,7 +146,8 @@ const foods = [
     category: "dinner",
     name: "Salmon with Grapefruit and Lentil Salad",
     image: dinner1,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 9.99,
   },
@@ -143,7 +156,8 @@ const foods = [
     category: "dinner",
     name: "Lemony Salmon Picata",
     image: dinner2,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 10.99,
   },
@@ -152,7 +166,8 @@ const foods = [
     category: "dinner",
     name: "Pork Tenderloin with Quinoa Pilaf",
     image: dinner3,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 12.99,
   },
@@ -161,7 +176,8 @@ const foods = [
     category: "dinner",
     name: "French fries with cheese",
     image: dinner4,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 8.99,
   },
@@ -170,7 +186,8 @@ const foods = [
     category: "dinner",
     name: "Garlic Butter Baked Salmon",
     image: dinner5,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 6.99,
   },
@@ -179,7 +196,8 @@ const foods = [
     category: "dinner",
     name: "Baked Chiken",
     image: dinner6,
-    description: "lorem ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     short_desc: "How we dream about our future",
     price: 9.99,
   },

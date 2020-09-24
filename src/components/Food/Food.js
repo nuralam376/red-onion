@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  FormControl,
+  Image,
+  Row,
+} from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import foodData from "../foodData/foodData";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Food = () => {
   const { id } = useParams();
@@ -19,12 +28,21 @@ const Food = () => {
         <Col>
           <h1>{name}</h1>
           <p>{description}</p>
-          <h3>
+          <h3 className="mt-3 mb-3">
             ${price} &nbsp;
-            <input type="number" className="w-25 text-center" value="1" />
+            <FormControl
+              componentClass={"input"}
+              type={"number"}
+              step={"1"}
+              min={1}
+              defaultValue={1}
+              className="w-25 d-inline"
+            />
           </h3>
-          <p>
-            <Button className="btn btn-danger">Add</Button>
+          <p className="mt-4 mb-4">
+            <Button className="btn btn-danger">
+              <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon> &nbsp; Add
+            </Button>
           </p>
           <p>
             <Image src={image} className="w-25" />
