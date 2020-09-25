@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Image, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
@@ -15,6 +16,9 @@ const Header = () => {
           />
         </Navbar.Brand>
         <Nav className="ml-auto">
+          <Link to="/shop" className="nav-link">
+            Shop
+          </Link>
           <Link to="/cart" className="nav-link">
             Cart
           </Link>

@@ -1,8 +1,13 @@
 .category {
-	text-align: center;
-	margin: 50px auto;
+  text-align: center;
+  margin: 50px auto;
 }
 
 .category a {
-	padding: 10px 20px;
+  padding: 10px 20px;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active {
+  color: lightblue;
+  background-color: gray;
 }

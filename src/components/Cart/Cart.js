@@ -7,14 +7,15 @@ const Cart = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    cart.map((food) => {
+    const newFood = cart.map((food) => {
       const foodData = allFoods.find((fd) => fd.id === +food.foodId);
       foodData.totalOrdered = food.total;
-      const cartFoods = [...foods, foodData];
-      console.log(cartFoods);
-      setFoods(cartFoods);
+      return foodData;
     });
-  }, [cart]);
+
+    const cartFoods = [...foods, newFood];
+    setFoods(cartFoods);
+  }, [cart, foods]);
 
   return (
     <div>

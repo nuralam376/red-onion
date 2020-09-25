@@ -21,6 +21,9 @@ function App() {
           <Route exact path="/">
             <Shop />
           </Route>
+          <Route exact path="/shop">
+            <Shop />
+          </Route>
           <Route exact path="/food/:id">
             <Food />
           </Route>

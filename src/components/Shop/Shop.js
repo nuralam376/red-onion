@@ -6,7 +6,7 @@ import { Button, Container } from "react-bootstrap";
 
 const Shop = () => {
   const [foods, setFoods] = useState([]);
-  const [category, setCategory] = useState("breakfast");
+  const [category, setCategory] = useState("lunch");
 
   useEffect(() => {
     const allFoods = foodData.filter((food) => food.category === category);
@@ -17,19 +17,25 @@ const Shop = () => {
     <div className="shop">
       <div className="category p-5">
         <Button
-          className="mr-5 btn btn-link bg-light"
+          className={`mr-5 btn btn-link bg-light ${
+            category === "breakfast" && "active"
+          }`}
           onClick={() => setCategory("breakfast")}
         >
           Breakfast
         </Button>
         <Button
-          className="mr-5 btn btn-link bg-light"
+          className={`mr-5 btn btn-link bg-light ${
+            category === "lunch" && "active"
+          }`}
           onClick={() => setCategory("lunch")}
         >
           Lunch
         </Button>
         <Button
-          className="mr-5 btn btn-link bg-light"
+          className={`mr-5 btn btn-link bg-light ${
+            category === "dinner" && "active"
+          }`}
           onClick={() => setCategory("dinner")}
         >
           Dinner
