@@ -30,20 +30,28 @@ const Food = () => {
   const addToCart = (id) => {
     const newItem = {
       foodId: id,
-      total: totalRef.current.value,
+      total: +totalRef.current.value,
     };
-    const newCart = [...cart, newItem];
+
+    const itemFound = cart.find((food) => food.foodId === newItem.foodId);
+    let newCart;
+
+    if (itemFound) {
+      itemFound.total += newItem.total;
+      newItem.total = itemFound.total;
+      const remainingCartFoods = cart.filter(
+        (food) => food.foodId !== newItem.foodId
+      );
+      newCart = [...remainingCartFoods, newItem];
+    } else {
+      newCart = [...cart, newItem];
+    }
     setCart(newCart);
     setAlert(true);
   };
 
   return (
     <Container className="mt-5">
-      {alert && (
-        <Alert className="w-50" variant="success">
-          Food added to cart successfully
-        </Alert>
-      )}
       <Row>
         <Col>
           <h1>{name}</h1>
@@ -65,6 +73,11 @@ const Food = () => {
               <FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon> &nbsp; Add
             </Button>
           </p>
+          {alert && (
+            <Alert className="w-50" variant="success">
+              Food added to cart successfully
+            </Alert>
+          )}
           <p>
             <Image src={image} className="w-25" />
             <Image src={image} className="w-25" />

@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import Foods from "../Foods/Foods";
 import "./Shop.css";
+import { Container } from "react-bootstrap";
+import Categories from "../Categories/Categories";
 import foodData from "../foodData/foodData";
-import { Button, Container } from "react-bootstrap";
+
+export const CategoryContext = createContext();
 
 const Shop = () => {
   const [foods, setFoods] = useState([]);
@@ -15,37 +18,14 @@ const Shop = () => {
 
   return (
     <div className="shop">
-      <div className="category p-5">
-        <Button
-          className={`mr-5 btn btn-link bg-light ${
-            category === "breakfast" && "active"
-          }`}
-          onClick={() => setCategory("breakfast")}
-        >
-          Breakfast
-        </Button>
-        <Button
-          className={`mr-5 btn btn-link bg-light ${
-            category === "lunch" && "active"
-          }`}
-          onClick={() => setCategory("lunch")}
-        >
-          Lunch
-        </Button>
-        <Button
-          className={`mr-5 btn btn-link bg-light ${
-            category === "dinner" && "active"
-          }`}
-          onClick={() => setCategory("dinner")}
-        >
-          Dinner
-        </Button>
-      </div>
-      <Container className="d-flex flex-wrap justify-content-center">
-        {foods.map((food) => (
-          <Foods key={food.id} food={food} />
-        ))}
-      </Container>
+      <CategoryContext.Provider value={[category, setCategory]}>
+        <Categories />
+        <Container className="d-flex flex-wrap justify-content-center">
+          {foods.map((food) => (
+            <Foods key={food.id} food={food} />
+          ))}
+        </Container>
+      </CategoryContext.Provider>
     </div>
   );
 };
