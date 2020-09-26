@@ -8,23 +8,35 @@ import allFoods from "../foodData/foodData";
 const Cart = () => {
   const [, , cart, setNewCart] = useContext(UserContext);
   const [foods, setFoods] = useState([]);
+  const [cartTotalPrice, setCartTotalPrice] = useState(0);
 
   useEffect(() => {
+    let total = 0;
     const newFood = cart.map((food) => {
       const foodData = allFoods.find((fd) => fd.id === +food.foodId);
       foodData.totalOrdered = food.total;
       foodData.totalPrice = foodData.price * foodData.totalOrdered;
+      total += foodData.totalPrice;
       return foodData;
     });
 
+    setCartTotalPrice(total);
     setFoods(newFood);
   }, [cart]);
+
+  const updateCart = (foods, cart) => {
+    const cartTotalPrice = foods.reduce((total, food) => total + food.price, 0);
+    setCartTotalPrice(cartTotalPrice);
+    setFoods(foods);
+    setNewCart(cart);
+  };
 
   const removeCartFood = (id) => {
     let confirmDelete = window.confirm("Are you sure?");
     if (confirmDelete) {
       const remainingFoods = foods.filter((food) => food.id !== id);
-      setFoods(remainingFoods);
+      const remainingCartFoods = cart.filter((food) => +food.foodId !== id);
+      updateCart(remainingFoods, remainingCartFoods);
     }
   };
 
@@ -38,8 +50,11 @@ const Cart = () => {
       totalPrice: +quantity * modifiedFood.price,
     };
 
-    setFoods(newFoods);
-    setNewCart(newFoods);
+    const newCartFood = newFoods.map((food) => {
+      const foodData = { foodId: food.id, total: food.totalOrdered };
+      return foodData;
+    });
+    updateCart(newFoods, newCartFood);
   };
 
   return (
@@ -54,6 +69,7 @@ const Cart = () => {
             <th>Price</th>
             <th>Quantity</th>
             <th>Total Price</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -77,10 +93,10 @@ const Cart = () => {
         </tbody>
         <tfoot>
           <tr>
-            <th colSpan="4" className="text-center">
+            <th colSpan="5" className="text-center">
               Total Price
             </th>
-            <td>$0</td>
+            <td>${cartTotalPrice.toFixed(2)}</td>
           </tr>
           <tr>
             <th colSpan="4"></th>
