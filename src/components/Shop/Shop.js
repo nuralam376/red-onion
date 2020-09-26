@@ -4,6 +4,7 @@ import "./Shop.css";
 import { Container } from "react-bootstrap";
 import Categories from "../Categories/Categories";
 import foodData from "../foodData/foodData";
+import Banner from "../Banner/Banner";
 
 export const CategoryContext = createContext();
 
@@ -19,6 +20,7 @@ const Shop = () => {
   return (
     <div className="shop">
       <CategoryContext.Provider value={[category, setCategory]}>
+        <Banner />
         <Categories />
         <Container className="d-flex flex-wrap justify-content-center">
           {foods.map((food) => (

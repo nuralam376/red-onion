@@ -91,20 +91,22 @@ const Cart = () => {
             </tr>
           )}
         </tbody>
-        <tfoot>
-          <tr>
-            <th colSpan="5" className="text-center">
-              Total Price
-            </th>
-            <td>${cartTotalPrice.toFixed(2)}</td>
-          </tr>
-          <tr>
-            <th colSpan="4"></th>
-            <td>
-              <Button className="btn btn-info">Checkout</Button>
-            </td>
-          </tr>
-        </tfoot>
+        {cart.length !== 0 && (
+          <tfoot>
+            <tr>
+              <th colSpan="5" className="text-center">
+                Total Price
+              </th>
+              <td>${cartTotalPrice.toFixed(2)}</td>
+            </tr>
+            <tr>
+              <th colSpan="4"></th>
+              <td>
+                <Button className="btn btn-info">Checkout</Button>
+              </td>
+            </tr>
+          </tfoot>
+        )}
       </Table>
     </Container>
   );

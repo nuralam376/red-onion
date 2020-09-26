@@ -1,11 +1,12 @@
 import React, { createContext, useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
 import Shop from "./components/Shop/Shop";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Food from "./components/Food/Food";
 import Cart from "./components/Cart/Cart";
+import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup";
 
 export const UserContext = createContext();
 
@@ -16,7 +17,7 @@ function App() {
     <UserContext.Provider value={[user, setUser, cart, setCart]}>
       <Router>
         <Header />
-        <Banner />
+
         <Switch>
           <Route exact path="/">
             <Shop />
@@ -29,6 +30,12 @@ function App() {
           </Route>
           <Route exact path="/cart">
             <Cart />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <Signup />
           </Route>
         </Switch>
       </Router>
