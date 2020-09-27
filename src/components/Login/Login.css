@@ -1,0 +1,17 @@
+.login {
+  background-image: url("https://i.ibb.co/Z81qj7H/bannerbackground.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+}
+
+.login .form-content .form {
+  margin-top: 200px;
+}
+
+.form-control {
+  border-radius: 10px;
+  text-shadow: 5px 5px 10px lightgray;
+}

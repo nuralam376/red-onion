@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Food from "./components/Food/Food";
 import Cart from "./components/Cart/Cart";
 import Login from "./components/Login/Login";
-import Signup from "./components/Signup/Signup";
 
 export const UserContext = createContext();
 
@@ -32,10 +31,10 @@ function App() {
             <Cart />
           </Route>
           <Route exact path="/login">
-            <Login />
+            <Login login={true} />
           </Route>
           <Route exact path="/signup">
-            <Signup />
+            <Login login={false} />
           </Route>
         </Switch>
       </Router>
