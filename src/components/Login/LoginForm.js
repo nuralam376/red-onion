@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-const LoginForm = ({ login, onSubmit }) => {
+const LoginForm = ({ login, onSubmit, message, setMessage }) => {
   const {
     register,
     handleSubmit,
@@ -15,11 +15,18 @@ const LoginForm = ({ login, onSubmit }) => {
   useEffect(() => {
     clearErrors();
     reset();
+    setMessage({});
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [login]);
 
   return (
     <div className="form">
+      {message && (
+        <span className={message.code === 200 ? "text-success" : "text-danger"}>
+          {message.data}
+        </span>
+      )}
+
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* register your input into the hook by invoking the "register" function */}
         {!login && (
@@ -58,14 +65,16 @@ const LoginForm = ({ login, onSubmit }) => {
 
         <input
           name="password"
-          ref={register({ required: true })}
+          ref={register({ required: true, minLength: 6 })}
           className="form-control mt-4"
           type="password"
           placeholder="Password"
         />
         {/* errors will return when field validation fails  */}
         {errors.password && (
-          <span className="text-danger">* This field is required</span>
+          <span className="text-danger">
+            * Password must be at least six characters
+          </span>
         )}
 
         {!login && (
