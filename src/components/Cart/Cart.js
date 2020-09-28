@@ -86,7 +86,7 @@ const Cart = () => {
           ) : (
             <tr>
               <td>
-                No food added. <Link to="/shop">Added from Shop</Link>
+                No food added. <Link to="/shop">Continue Shopping</Link>
               </td>
             </tr>
           )}
