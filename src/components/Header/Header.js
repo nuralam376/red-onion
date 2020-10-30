@@ -22,12 +22,12 @@ const Header = () => {
           <Link to="/cart" className="nav-link">
             Cart
           </Link>
-          <Link to="/login" className="nav-link">
+          {/* <Link to="/login" className="nav-link">
             Login
           </Link>
           <Link to="/signup" className="nav-link">
             Signup
-          </Link>
+          </Link> */}
         </Nav>
       </Container>
     </Navbar>

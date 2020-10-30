@@ -102,7 +102,7 @@ const Cart = () => {
             <tr>
               <th colSpan="4"></th>
               <td>
-                <Button className="btn btn-info">Checkout</Button>
+                {/* <Button className="btn btn-info">Checkout</Button> */}
               </td>
             </tr>
           </tfoot>
